@@ -29,14 +29,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.test.ui.theme.TestTheme
 import kotlinx.coroutines.launch
-
-// ---------- Data Model ----------
 data class Note(
     val id: Int,
     val content: String
 )
-
-// ---------- App Entry ----------
 @Composable
 fun NotepadApp(navController: NavHostController) {
     val navController = rememberNavController()
@@ -52,8 +48,6 @@ fun NotepadApp(navController: NavHostController) {
         }
     }
 }
-
-// ---------- Menu Screen ----------
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NoteListScreen(navController: NavController, notes: MutableList<Note>) {
@@ -114,8 +108,6 @@ fun NoteListScreen(navController: NavController, notes: MutableList<Note>) {
         }
     }
 }
-
-// ---------- Your Original Editor (Unmodified core logic) ----------
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TextEditorScreen(
